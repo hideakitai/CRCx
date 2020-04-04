@@ -2,6 +2,9 @@
 #ifndef CRC_ARDUINO_H
 #define CRC_ARDUINO_H
 
+#include <cstdint>
+#include <cstdlib>
+
 namespace CRC
 {
     uint8_t crc8(const uint8_t *buff, size_t size)
