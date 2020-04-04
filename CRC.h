@@ -7,7 +7,7 @@
 
 namespace CRC
 {
-    uint8_t crc8(const void *buff, size_t size)
+    inline uint8_t crc8(const void *buff, size_t size)
     {
         uint8_t* p = (uint8_t*)buff;
         uint8_t result = 0xFF;
@@ -32,7 +32,7 @@ namespace CRC
         return result;
     }
 
-    uint16_t crc16(const void *buff, size_t size)
+    inline uint16_t crc16(const void *buff, size_t size)
     {
         uint8_t* data = (uint8_t*)buff;
         uint16_t result = 0xFFFF;
