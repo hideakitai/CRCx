@@ -5,7 +5,7 @@
 
 #ifdef ARDUINO
 #include <Arduino.h>
-#include "FastCRC.h" // x2 to x10 faster
+#include "FastCRC/FastCRC.h" // x2 to x10 faster
 #else
 #define CRCPP_USE_CPP11
 #define CRCPP_USE_NAMESPACE
