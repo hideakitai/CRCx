@@ -5,12 +5,12 @@
 
 #ifdef ARDUINO
 #include <Arduino.h>
-#include "FastCRC/FastCRC.h"  // x2 to x10 faster
+#include "libs/FastCRC/FastCRC.h"  // x2 to x10 faster
 #else
 #define CRCPP_USE_CPP11
 #define CRCPP_USE_NAMESPACE
 #define CRCPP_INCLUDE_ESOTERIC_CRC_DEFINITIONS
-#include "CRCpp/CRCpp.h"
+#include "libs/CRCpp/CRCpp.h"
 #endif
 
 namespace ht {
