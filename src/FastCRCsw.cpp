@@ -33,9 +33,9 @@
 #include "Arduino.h"
 #if !defined(KINETISK)
 
-#include "FastCRC.h"
-#include "FastCRC_cpu.h"
-#include "FastCRC_tables.h"
+#include "../libs/FastCRC/FastCRC.h"
+#include "../libs/FastCRC/FastCRC_cpu.h"
+#include "../libs/FastCRC/FastCRC_tables.h"
 
 
 // ================= 7-BIT CRC ===================
@@ -159,10 +159,10 @@ uint16_t FastCRC16::ccitt_upd(const uint8_t *data, uint16_t len)
 	while (len--) {
 		crc = (crc >> 8) ^ pgm_read_word(&crc_table_ccitt[(crc & 0xff) ^ *data++]);
 	}
-	
-	seed = crc;	
+
+	seed = crc;
 	crc = REV16(crc);
-	
+
 	return crc;
 }
 uint16_t FastCRC16::ccitt(const uint8_t *data,const uint16_t datalen)
@@ -324,7 +324,7 @@ uint16_t FastCRC16::xmodem_upd(const uint8_t *data, uint16_t len)
 	}
 
 	seed = crc;
-	crc = REV16(crc);	
+	crc = REV16(crc);
 	return crc;
 }
 
@@ -391,7 +391,7 @@ FastCRC32::FastCRC32(){}
 	pgm_read_dword(&table[((crc >> 8) & 0xff) + 0x200]) ^	\
 	pgm_read_dword(&table[((crc >> 16) & 0xff) + 0x100]) ^	\
 	pgm_read_dword(&table[(crc >> 24) & 0xff]);
-	
+
 #define crcsm_n4d(crc, data, table) crc ^= data; \
 	crc = (crc >> 8) ^ pgm_read_dword(&table[crc & 0xff]); \
 	crc = (crc >> 8) ^ pgm_read_dword(&table[crc & 0xff]); \
@@ -493,9 +493,9 @@ uint32_t FastCRC32::cksum_upd(const uint8_t *data, uint16_t len)
 	while (len--) {
 		crc = (crc >> 8) ^ pgm_read_dword(&CRC_TABLE_CKSUM[(crc & 0xff) ^ *data++]);
 	}
-	
+
 	seed = crc;
-	crc = ~REV32(crc);	
+	crc = ~REV32(crc);
 	return crc;
 }
 
