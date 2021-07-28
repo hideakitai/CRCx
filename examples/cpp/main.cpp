@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../CRCx.h"
+#include "../../src/CRCx.h"
 
 const uint8_t data[] = {'H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D'};
 const size_t size = sizeof(data);
@@ -15,3 +15,8 @@ int main() {
 
     return 0;
 }
+
+// Output:
+// crc8  = 0x7
+// crc16 = 0xB944
+// crc32 = 0x87E5865B

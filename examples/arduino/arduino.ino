@@ -21,3 +21,8 @@ void setup() {
 
 void loop() {
 }
+
+// Output:
+// crc8  = 0x7
+// crc16 = 0xB944
+// crc32 = 0x87E5865B
