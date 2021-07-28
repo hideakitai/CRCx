@@ -1,11 +1,10 @@
 #include <iostream>
 #include "../CRCx.h"
 
-const uint8_t data[] = { 'H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D' };
+const uint8_t data[] = {'H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D'};
 const size_t size = sizeof(data);
 
-int main()
-{
+int main() {
     uint8_t result8 = crcx::crc8(data, size);
     uint16_t result16 = crcx::crc16(data, size);
     uint32_t result32 = crcx::crc32(data, size);

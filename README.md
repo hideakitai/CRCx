@@ -13,11 +13,10 @@ CRCx is based on fast and efficient two great works, and CRCx is just a glue for
 ``` C++
 #include <CRCx.h>
 
-const uint8_t data[] = { 'H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D' };
+const uint8_t data[] = {'H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D'};
 const size_t size = sizeof(data);
 
-void setup()
-{
+void setup() {
     Serial.begin(115200);
     delay(2000);
 
@@ -48,14 +47,12 @@ uint32_t result32 = crcx::crc32(data, size, Crc32::POSIX);
 Available options and default parameters are shown below.
 
 ``` C++
-enum class Crc8 : uint8_t
-{
+enum class Crc8 : uint8_t {
     SMBUS, // default
     MAXIM
 };
 
-enum class Crc16 : uint8_t
-{
+enum class Crc16 : uint8_t {
     CCITT,
     KERMIT,
     MODBUS, // default
@@ -63,8 +60,7 @@ enum class Crc16 : uint8_t
     X25
 };
 
-enum class Crc32 : uint8_t
-{
+enum class Crc32 : uint8_t {
     CRC32, // default
     POSIX
 };

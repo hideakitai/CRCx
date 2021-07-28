@@ -1,10 +1,9 @@
 #include <CRCx.h>
 
-const uint8_t data[] = { 'H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D' };
+const uint8_t data[] = {'H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D'};
 const size_t size = sizeof(data);
 
-void setup()
-{
+void setup() {
     Serial.begin(115200);
     delay(2000);
 
@@ -20,6 +19,5 @@ void setup()
     Serial.println(result32, HEX);
 }
 
-void loop()
-{
+void loop() {
 }
