@@ -5,7 +5,7 @@ This library is created to use crc calculation as same method for both Arduino a
 CRCx is based on fast and efficient two great works, and CRCx is just a glue for these two great works.
 
 - [FastCRC](https://github.com/FrankBoesing/FastCRC) by @FrankBoesing for Arduino
-- [CRCpp](https://github.com/d-bahr/CRCpp) by @d-bahr for other C++ programs
+- [CRCpp](https://github.com/d-bahr/CRCpp) v1.1.0.0 by @d-bahr for other C++ programs
 
 
 ## Usage
