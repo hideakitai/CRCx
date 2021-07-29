@@ -134,6 +134,7 @@ namespace util {
 
         }  // namespace fastcrc
 
+        using namespace fastcrc;
 #else
 
         namespace crcpp {
@@ -241,16 +242,13 @@ namespace util {
             }
         }  // namespace crcpp
 
+        using namespace crcpp;
 #endif
 
     }  // namespace crc
 }  // namespace util
 }  // namespace ht
 
-#ifdef ARDUINO
-namespace crcx = ht::util::crc::fastcrc;
-#else
-namespace crcx = ht::util::crc::crcpp;
-#endif
+namespace crcx = ht::util::crc;
 
 #endif  // HT_UTIL_CRC_WRAPPER_H
