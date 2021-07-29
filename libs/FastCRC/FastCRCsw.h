@@ -33,9 +33,9 @@
 #include "Arduino.h"
 #if !defined(KINETISK)
 
-#include "../libs/FastCRC/FastCRC.h"
-#include "../libs/FastCRC/FastCRC_cpu.h"
-#include "../libs/FastCRC/FastCRC_tables.h"
+#include "FastCRC.h"
+#include "FastCRC_cpu.h"
+#include "FastCRC_tables.h"
 
 
 // ================= 7-BIT CRC ===================

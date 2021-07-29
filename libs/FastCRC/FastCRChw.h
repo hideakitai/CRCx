@@ -36,7 +36,7 @@
 #if defined(KINETISK)
 
 #include "mk20dx128.h"
-#include "../libs/FastCRC/FastCRC.h"
+#include "FastCRC.h"
 
 // ===============================================
 
