@@ -5,11 +5,7 @@
 
 #ifdef ARDUINO
 #include <Arduino.h>
-#if defined(KINETISK)
-#include "libs/FastCRC/FastCRChw.h"
-#else
-#include "libs/FastCRC/FastCRCsw.h"
-#endif
+#include <FastCRC.h>
 #else
 #define CRCPP_USE_CPP11
 #define CRCPP_USE_NAMESPACE
